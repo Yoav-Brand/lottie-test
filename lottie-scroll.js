@@ -102,12 +102,13 @@ export function lottieScroll(config) {
 //********** Lottie Scroll ***********/
 
 const createPlayer = () => {
-    debugger;
+    console.log("in the createPlayer");
     const lottiePlayer = document.createElement('div');
     // const blobUrl = new Blob([JSON.stringify(lotiAnimation)], {type: 'application/json'});
     // const url = URL.createObjectURL(blobUrl);
     const url = new URL('https://raw.githubusercontent.com/Yoav-Brand/lottie-test/main/animation.json');
-    debugger;
+    console.log("after creating the url");
+    console.log("the url: ", url);
     lottiePlayer.innerHTML = `
     <lottie-player id="firstLottie" src="${url}" ></lottie-player>
     `;
@@ -130,6 +131,7 @@ const createPlayer = () => {
 //<lottie-player id="firstLottie" src="https://assets5.lottiefiles.com/packages/lf20_FISfBK.json" style="width:400px; height: 400px;"></lottie-player>
 
 const animationProps = () => {
+  console.log("animation props");
     const animActions = {
         firstLottie: {
             actions: [{
@@ -147,8 +149,8 @@ class scrollingLottie extends HTMLElement {
     constructor() {
         super();
     }
-
     connectedCallback() {
+        console.log("in the scrollingLottie Class connectedCallback")
         this.appendChild(createPlayer());
         this.appendChild(animationProps());
 
