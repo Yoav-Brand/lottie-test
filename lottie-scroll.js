@@ -103,8 +103,9 @@ export function lottieScroll(config) {
 
 const createPlayer = () => {
     const lottiePlayer = document.createElement('div');
-    const blobUrl = new Blob([JSON.stringify(lotiAnimation)], {type: 'application/json'});
-    const url = URL.createObjectURL(blobUrl);
+    // const blobUrl = new Blob([JSON.stringify(lotiAnimation)], {type: 'application/json'});
+    // const url = URL.createObjectURL(blobUrl);
+    const url = new URL('https://raw.githubusercontent.com/Yoav-Brand/lottie-test/main/animation.json');
     lottiePlayer.innerHTML = `
     <lottie-player id="firstLottie" src="${url}" ></lottie-player>
     `;
