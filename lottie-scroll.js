@@ -102,6 +102,7 @@ export function lottieScroll(config) {
 //********** Lottie Scroll ***********/
 
 const createPlayer = () => {
+    debugger;
     const lottiePlayer = document.createElement('div');
     // const blobUrl = new Blob([JSON.stringify(lotiAnimation)], {type: 'application/json'});
     // const url = URL.createObjectURL(blobUrl);
