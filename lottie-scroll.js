@@ -158,4 +158,4 @@ class scrollingLottie extends HTMLElement {
     }
 }
 
-customElements.define('wix-lottie', scrollingLottie);
+customElements.define('my-wix-lottie', scrollingLottie);
